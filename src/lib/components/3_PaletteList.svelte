@@ -5,7 +5,7 @@
 	// Menerima data dari parent
 	export let entries: [string, string][] = [];
 	export let jsonString: string = '{}';
-	export let activeScheme: 'light' | 'dark' = 'light'; // <-- PROP BARU
+	export let activeScheme: 'light' | 'dark' = 'light';
 
 	// Berlangganan ke displayMode
 	let displayMode: 'hex' | 'rgba';
@@ -48,40 +48,39 @@
 
 <div class="collapse collapse-arrow bg-base-200 rounded-lg shadow-lg">
 	<input type="checkbox" checked />
-	<div class="collapse-title text-xl font-medium">
-		<div class="flex flex-col md:flex-row justify-between md:items-center p-2 gap-4">
-			<h2 class="text-2xl font-bold capitalize">
-				Generated Palette ({activeScheme} Scheme)
-			</h2>
-			<div class="flex items-center gap-2 flex-wrap">
-				<div role="tablist" class="tabs tabs-boxed tabs-sm">
-					<a
-						role="tab"
-						class="tab"
-						class:tab-active={displayMode === 'hex'}
-						on:click={() => setDisplayMode('hex')}
-					>
-						HEX
-					</a>
-					<a
-						role="tab"
-						class="tab"
-						class:tab-active={displayMode === 'rgba'}
-						on:click={() => setDisplayMode('rgba')}
-					>
-						RGBA
-					</a>
-				</div>
-				<button
-					class="btn btn-secondary btn-sm"
-					on:click={(e) => copyToClipboard(jsonString, e.currentTarget)}
-				>
-					Copy All (JSON)
-				</button>
-			</div>
-		</div>
+	<div class="collapse-title text-xl font-medium p-4">
+		<h2 class="text-2xl font-bold capitalize">
+			Generated Palette ({activeScheme} Scheme)
+		</h2>
 	</div>
-	<div class="collapse-content bg-base-100">
+	<div class="collapse-content bg-base-100 p-0">
+		<div class="flex items-center gap-2 flex-wrap p-4 border-b border-base-300">
+			<div role="tablist" class="tabs tabs-boxed tabs-sm">
+				<a
+					role="tab"
+					class="tab"
+					class:tab-active={displayMode === 'hex'}
+					on:click={() => setDisplayMode('hex')}
+				>
+					HEX
+				</a>
+				<a
+					role="tab"
+					class="tab"
+					class:tab-active={displayMode === 'rgba'}
+					on:click={() => setDisplayMode('rgba')}
+				>
+					RGBA
+				</a>
+			</div>
+			<button
+				class="btn btn-secondary btn-sm"
+				on:click={(e) => copyToClipboard(jsonString, e.currentTarget)}
+			>
+				Copy All (JSON)
+			</button>
+		</div>
+
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
 			{#each entries as [name, hexCode] (name)}
 				<div class="card card-compact bg-base-200/50 shadow-sm border border-base-content/10">
@@ -98,7 +97,7 @@
 						</div>
 						<div
 							class="tooltip tooltip-bottom text-justify max-w-xs"
-							data-tip={colorDescriptions[name] || 'Deskripsi tidak tersedia'}
+							data-tip={colorDescriptions[name] || 'Description not available'}
 						>
 							<button class="btn btn-ghost btn-circle btn-sm" aria-label="Info">
 								<svg
