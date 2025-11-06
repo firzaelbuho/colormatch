@@ -28,7 +28,7 @@
 
 <div class="card bg-base-200 shadow-xl h-full">
 	<div class="card-body">
-		<h1 class="card-title text-3xl font-bold">🎨 ColorMatch MD3</h1>
+		<h1 class="card-title text-3xl font-bold">UI Color Match</h1>
 		<p class="mb-4 text-base-content/80">
 			Generate a full Material Design 3 color palette from a single source color.
 		</p>

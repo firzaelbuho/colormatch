@@ -138,7 +138,7 @@
 									style:background-color={palette.primary}
 									style:color={palette.onPrimary}
 								>
-									<span classG="text-xl font-bold">Primary</span>
+									<span class="text-xl font-bold">Primary</span>
 								</div>
 								<div
 									class="flex items-center justify-center p-8 rounded-lg shadow-md"
@@ -156,6 +156,7 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="space-y-4">
 							<h3 class="font-bold">Semantic States</h3>
 							<div
@@ -218,9 +219,27 @@
 								>
 								<span><strong>Warning:</strong> Mapped to <strong>secondaryContainer</strong>.</span>
 							</div>
+							<div
+								class="alert"
+								style:background-color={palette.primaryContainer}
+								style:color={palette.onPrimaryContainer}
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-6 w-6 shrink-0"
+									fill="none"
+									viewBox="0 0 24 24"
+									style:stroke={palette.primary}
+									><path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d={icons.info}
+									/></svg
+								>
+								<span><strong>Info:</strong> Mapped to <strong>primaryContainer</strong>.</span>
+							</div>
 						</div>
-
-						
 
 						<div
 							class="toast-demo flex items-center justify-between gap-4 rounded-lg p-4 shadow-lg"
@@ -231,6 +250,19 @@
 							<button class="font-bold" style:color={palette.inversePrimary}>
 								UNDO
 							</button>
+						</div>
+
+						<div class="pt-6 text-center text-sm" style:color={palette.onSurfaceVariant}>
+							For more details, read the
+							<a
+								href="https://m3.material.io/styles/color/the-color-system/color-roles"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="link"
+								style:color={palette.primary}
+							>
+								official Material Design 3 guidelines
+							</a>.
 						</div>
 					</div>
 				</div>
