@@ -48,7 +48,7 @@
 						</button>
 					</div>
 					<div class="flex-1">
-						<a href="/" class="btn btn-ghost text-xl">ColorMatch App</a>
+						<a href="/static" class="btn btn-ghost text-xl">ColorMatch App</a>
 					</div>
 					<div class="flex-none">
 						<button class="btn btn-square btn-ghost">

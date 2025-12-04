@@ -1,0 +1,16 @@
+{
+  "modules": [
+    {
+      "name": "color-scheme",
+      "route": "color-scheme"
+    },
+    {
+      "name": "pastel-color",
+      "route": "pastel-color"
+    },
+    {
+      "name": "home",
+      "route": "/"
+    }
+  ]
+}
